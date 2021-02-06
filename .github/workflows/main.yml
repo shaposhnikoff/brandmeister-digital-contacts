@@ -48,7 +48,7 @@ jobs:
           subject: Github Actions job result ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           # Literal body:
           # body: Build job of ${{github.repository}} completed successfully!
-          body: Build job of ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }
+          body: Build job of ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
           # Read file contents as body:
           # body: file://README.md
           to: shaposhnikoff@gmail.com ,max@shaposhnikoff.info
