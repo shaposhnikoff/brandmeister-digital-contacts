@@ -22,10 +22,21 @@ jobs:
       - name: Install Requirements
         run: pip3 install -r requirements.txt
 
-      - name: Execute Python script
+      - name: Generate BM digital contacts for whole world
         run: |
-          python3 scripts/jtc_users.py
+          python3 jtc_users.py
 
+
+      - name: Generate BM digital contacts for Ukraine
+        run: |
+          python3 jtc_users.ua.py
+
+
+      - name: Generate BM digital contacts for RB 
+        run: |
+          python3 jtc_users.by.py
+
+          
       - name: setup git config
         run: |
           git config user.name ${{ secrets.USERNAME }}
