@@ -82,6 +82,7 @@ function create_gnu_index ()
         find -L . -mount -depth -maxdepth 1 -type d \
 		! -name '.' \
 		! -name '.git' \
+		! -name '.github' \
 		-printf "      <a href=\"%f\">%-43f@_@%Td-%Tb-%TY %Tk:%TM  -\n"|sort -d|sed 's,\([\ ]\+\)@_@,/</a>\1,g'
 
         # print the footer html
