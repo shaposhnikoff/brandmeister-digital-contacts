@@ -40,17 +40,19 @@ jobs:
       - name: 'Get pandoc'
         run:  sudo apt-get install pandoc
     
-      - name: 'Get My TODO List'
-        run:  pandoc ./cv.md > index.html
+#      - name: 'Get My TODO List'
+#        run:  pandoc ./cv.md > index.html
   
-      - name: html to pdf
-        uses: fifsky/html-to-pdf-action@master
-        with:
-          htmlFile: index.html
-          outputFile: resume.pdf
-          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+#      - name: html to pdf
+#        uses: fifsky/html-to-pdf-action@master
+#        with:
+#          htmlFile: index.html
+#          outputFile: resume.pdf
+#          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
-          
+      - name: Create directory listing 
+        run: ./gnu-mirror-index-creator.sh
+               
       - name: setup git config
         run: |
           git config user.name ${{ secrets.USERNAME }}
