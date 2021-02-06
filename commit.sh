@@ -7,7 +7,6 @@ dated=`date +%Y-%m-%d-%H%M%S`
 #./jtc_users.by.py
 
 
-./gnu-mirror-index-creator.sh
 
 sleep 1 
 git add .
