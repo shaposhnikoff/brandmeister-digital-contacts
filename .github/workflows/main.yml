@@ -50,7 +50,7 @@ jobs:
           # body: Build job of ${{github.repository}} completed successfully!
           body: Build job of ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }
           # Read file contents as body:
-          body: file://README.md
+          # body: file://README.md
           to: shaposhnikoff@gmail.com ,max@shaposhnikoff.info
           from: Maksym Shaposhnikov # <user@example.com>
           # Optional carbon copy recipients
