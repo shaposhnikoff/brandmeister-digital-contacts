@@ -41,7 +41,7 @@ jobs:
         run:  sudo apt-get install pandoc
     
       - name: 'Get My TODO List'
-        run:  pandoc ./index.md > result.html
+        run:  pandoc ./index.md > index.html
 
           
       - name: setup git config
